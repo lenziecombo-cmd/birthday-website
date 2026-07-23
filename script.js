@@ -45,7 +45,7 @@ surpriseBtn.addEventListener("click", function () {
 // 🎵 Music Button
 const musicBtn = document.getElementById("musicBtn");
 const song = document.getElementById("song");
-const audioFile = "Palagi - TJ Monterde.mp3";
+const audioFile = "palagi.mp3";
 
 // Don't preload — set src only on user click for better file:// compatibility
 var isFirstClick = true;
