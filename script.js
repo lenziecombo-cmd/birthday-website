@@ -74,49 +74,54 @@ Happy Birthday, my Bebi! ❤️`;
 
 
     // ❤️ Surprise Button
-    surpriseBtn.onclick = function () {
+    surpriseBtn.addEventListener("click", function () {
 
-        console.log("Button clicked");
+    console.log("Surprise button works!");
 
-        letter.classList.remove("hidden");
+    letter.classList.remove("hidden");
 
-        alert(
-            "🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰"
-        );
+    alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
 
-        launchConfetti();
+    launchConfetti();
 
-    };
-
+});
 
     // ❤️ Music Button
     let playing = false;
 
-    musicBtn.onclick = function () {
+    musicBtn.addEventListener("click", function () {
 
-        if (!playing) {
+    console.log("Music button works!");
 
-            song.src = "palagi.mp3";
-            song.load();
+    if (!playing) {
 
-            song.play().catch(function (error) {
-                console.log(error);
+        song.src = "palagi.mp3";
+
+        song.play()
+            .then(function () {
+
+                console.log("Music playing!");
+
+            })
+            .catch(function (error) {
+
+                console.log("Music error:", error);
+
             });
 
-            musicBtn.innerHTML = "⏸ Pause Music";
-            playing = true;
+        musicBtn.innerHTML = "⏸ Pause Music";
+        playing = true;
 
-        } else {
+    } else {
 
-            song.pause();
+        song.pause();
 
-            musicBtn.innerHTML = "🎵 Play Our Song";
-            playing = false;
+        musicBtn.innerHTML = "🎵 Play Our Song";
+        playing = false;
 
-        }
+    }
 
-    };
-
+});
 
     // ❤️ Confetti
     function launchConfetti() {
