@@ -1,4 +1,3 @@
-alert("JavaScript Connected!");
 // ❤️ Wait until the page is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
 
