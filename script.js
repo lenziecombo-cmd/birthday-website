@@ -27,7 +27,7 @@ Happy Birthday, my Bebi! ❤️`;
 
     function typeWriter() {
         if (i < message.length) {
-            typing.innerHTML += message.charAt(i);
+            typing.textContent += message.charAt(i);
             i++;
             setTimeout(typeWriter, 45);
         }
@@ -73,8 +73,9 @@ Happy Birthday, my Bebi! ❤️`;
 
 
     // ❤️ Surprise Button
-    surpriseBtn.addEventListener("click", function () {
-
+   <button id="surpriseBtn">
+    🎁 Surprise
+</button>
     console.log("Surprise button works!");
 
     letter.classList.remove("hidden");
@@ -88,7 +89,11 @@ Happy Birthday, my Bebi! ❤️`;
     // ❤️ Music Button
     let playing = false;
 
-    musicBtn.addEventListener("click", function () {
+    button id="musicBtn">
+    🎵 Play Our Song
+</button>
+
+<audio id="song"></audio>
 
     console.log("Music button works!");
 
