@@ -81,8 +81,12 @@ Happy Birthday, my Bebi! ❤️`;
 
         if (!playing) {
 
-            song.src = "palagi.mp3"; // siguraduhing ito ang filename mo
-            song.play();
+            song.src = "palagi.mp3";
+            song.load();
+
+            song.play().catch(function(error) {
+                console.log(error);
+        });
 
             musicBtn.innerHTML = "⏸ Pause Music";
             playing = true;
@@ -95,10 +99,6 @@ Happy Birthday, my Bebi! ❤️`;
             playing = false;
 
         }
-
-    };
-
-});
 
 // ❤️ Confetti
 function launchConfetti() {
