@@ -30,15 +30,12 @@ window.onload = function () {
 
 // 🎁 Surprise Button
 const surpriseBtn = document.getElementById("surpriseBtn");
-const letter = document.getElementById("letter");
 
-surpriseBtn.addEventListener("click", function () {
-
+surpriseBtn.onclick = function () {
     letter.classList.remove("hidden");
-
     launchConfetti();
-
     alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
+};
 
 });
 
