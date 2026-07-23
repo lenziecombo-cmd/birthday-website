@@ -1,3 +1,4 @@
+alert("JavaScript Connected!");
 // ❤️ Wait until the page is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -27,7 +28,7 @@ Happy Birthday, my Bebi! ❤️`;
 
     function typeWriter() {
         if (i < message.length) {
-            typing.textContent += message.charAt(i);
+            typing.innerHTML += message.charAt(i);
             i++;
             setTimeout(typeWriter, 45);
         }
@@ -73,9 +74,8 @@ Happy Birthday, my Bebi! ❤️`;
 
 
     // ❤️ Surprise Button
-   <button id="surpriseBtn">
-    🎁 Surprise
-</button>
+    surpriseBtn.addEventListener("click", function () {
+
     console.log("Surprise button works!");
 
     letter.classList.remove("hidden");
@@ -89,11 +89,7 @@ Happy Birthday, my Bebi! ❤️`;
     // ❤️ Music Button
     let playing = false;
 
-    button id="musicBtn">
-    🎵 Play Our Song
-</button>
-
-<audio id="song"></audio>
+    musicBtn.addEventListener("click", function () {
 
     console.log("Music button works!");
 
