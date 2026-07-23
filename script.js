@@ -35,6 +35,7 @@ Happy Birthday, my Bebi! ❤️`;
 
     typeWriter();
 
+
     // ❤️ Countdown
     function startCountdown() {
 
@@ -51,9 +52,15 @@ Happy Birthday, my Bebi! ❤️`;
             }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor(
+                (distance % (1000 * 60)) / 1000
+            );
 
             countdown.innerHTML =
                 `⏳ ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
@@ -64,16 +71,22 @@ Happy Birthday, my Bebi! ❤️`;
 
     startCountdown();
 
+
     // ❤️ Surprise Button
-  surpriseBtn.onclick = function () {
+    surpriseBtn.onclick = function () {
 
-    letter.classList.remove("hidden");
+        console.log("Button clicked");
 
-    launchConfetti();
+        letter.classList.remove("hidden");
 
-    alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
+        alert(
+            "🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰"
+        );
 
-};
+        launchConfetti();
+
+    };
+
 
     // ❤️ Music Button
     let playing = false;
@@ -85,9 +98,9 @@ Happy Birthday, my Bebi! ❤️`;
             song.src = "palagi.mp3";
             song.load();
 
-            song.play().catch(function(error) {
+            song.play().catch(function (error) {
                 console.log(error);
-        });
+            });
 
             musicBtn.innerHTML = "⏸ Pause Music";
             playing = true;
@@ -100,65 +113,91 @@ Happy Birthday, my Bebi! ❤️`;
             playing = false;
 
         }
-    };   // ← Isara ang musicBtn.onclick
 
-});      // ← Isara ang DOMContentLoaded
+    };
 
-// ❤️ Confetti
-function launchConfetti() {
 
-    for (let i = 0; i < 120; i++) {
+    // ❤️ Confetti
+    function launchConfetti() {
 
-        let confetti = document.createElement("div");
+        for (let i = 0; i < 120; i++) {
 
-        confetti.innerHTML = ["🎉", "✨", "💖", "💕", "❤️", "🎊"][Math.floor(Math.random() * 6)];
+            let confetti = document.createElement("div");
 
-        confetti.style.position = "fixed";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.top = "-20px";
-        confetti.style.fontSize = (15 + Math.random() * 20) + "px";
-        confetti.style.transition = "transform 3s linear, opacity 3s linear";
-        confetti.style.zIndex = "9999";
+            confetti.innerHTML = [
+                "🎉",
+                "✨",
+                "💖",
+                "💕",
+                "❤️",
+                "🎊"
+            ][Math.floor(Math.random() * 6)];
 
-        document.body.appendChild(confetti);
+            confetti.style.position = "fixed";
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.top = "-20px";
+            confetti.style.fontSize = (15 + Math.random() * 20) + "px";
+            confetti.style.transition =
+                "transform 3s linear, opacity 3s linear";
+            confetti.style.zIndex = "9999";
 
-        setTimeout(function () {
-            confetti.style.transform =
-                `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg)`;
-            confetti.style.opacity = "0";
-        }, 50);
+            document.body.appendChild(confetti);
 
-        setTimeout(function () {
-            confetti.remove();
-        }, 3200);
+
+            setTimeout(function () {
+
+                confetti.style.transform =
+                    `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg)`;
+
+                confetti.style.opacity = "0";
+
+            }, 50);
+
+
+            setTimeout(function () {
+
+                confetti.remove();
+
+            }, 3200);
+
+        }
 
     }
 
-}
 
-// ❤️ Sparkles
-setInterval(function () {
+    // ❤️ Sparkles
+    setInterval(function () {
 
-    const sparkle = document.createElement("div");
+        const sparkle = document.createElement("div");
 
-    sparkle.innerHTML = "✨";
+        sparkle.innerHTML = "✨";
 
-    sparkle.style.position = "fixed";
-    sparkle.style.left = Math.random() * 100 + "vw";
-    sparkle.style.top = Math.random() * 100 + "vh";
-    sparkle.style.fontSize = (10 + Math.random() * 20) + "px";
-    sparkle.style.transition = "all 2s";
-    sparkle.style.pointerEvents = "none";
+        sparkle.style.position = "fixed";
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.top = Math.random() * 100 + "vh";
+        sparkle.style.fontSize = (10 + Math.random() * 20) + "px";
+        sparkle.style.transition = "all 2s";
+        sparkle.style.pointerEvents = "none";
 
-    document.body.appendChild(sparkle);
+        document.body.appendChild(sparkle);
 
-    setTimeout(function () {
-        sparkle.style.opacity = "0";
-        sparkle.style.transform = "scale(2)";
-    }, 100);
 
-    setTimeout(function () {
-        sparkle.remove();
-    }, 2200);
+        setTimeout(function () {
 
-}, 700);
+            sparkle.style.opacity = "0";
+            sparkle.style.transform = "scale(2)";
+
+        }, 100);
+
+
+        setTimeout(function () {
+
+            sparkle.remove();
+
+        }, 2200);
+
+
+    }, 700);
+
+
+});
