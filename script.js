@@ -99,6 +99,9 @@ Happy Birthday, my Bebi! ❤️`;
             playing = false;
 
         }
+    };   // ← Isara ang musicBtn.onclick
+
+});      // ← Isara ang DOMContentLoaded
 
 // ❤️ Confetti
 function launchConfetti() {
