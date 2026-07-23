@@ -65,13 +65,12 @@ Happy Birthday, my Bebi! ❤️`;
     startCountdown();
 
     // ❤️ Surprise Button
-    surpriseBtn.onclick = function () {
+   surpriseBtn.onclick = function () {
+    letter.classList.remove("hidden");
 
-        letter.classList.remove("hidden");
+    launchConfetti();
 
-        launchConfetti();
-
-        alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
+       alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
 
     };
 
