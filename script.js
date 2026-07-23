@@ -65,10 +65,10 @@ Happy Birthday, my Bebi! ❤️`;
     startCountdown();
 
     // ❤️ Surprise Button
-   surpriseBtn.onclick = function () {
-    letter.classList.remove("hidden");
+  surpriseBtn.onclick = function () {
+    console.log("Button clicked");
 
-    launchConfetti();
+    letter.classList.remove("hidden");
 
        alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
 
