@@ -66,13 +66,14 @@ Happy Birthday, my Bebi! ❤️`;
 
     // ❤️ Surprise Button
   surpriseBtn.onclick = function () {
-    console.log("Button clicked");
 
     letter.classList.remove("hidden");
 
-       alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
+    launchConfetti();
 
-    };
+    alert("🎉 Happy Birthday, Bebi! ❤️\n\nI hope all your dreams come true. I love you always! 🥰");
+
+};
 
     // ❤️ Music Button
     let playing = false;
